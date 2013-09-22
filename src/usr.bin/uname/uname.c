@@ -122,10 +122,8 @@ main(int argc, char *argv[])
 		if (space++) putchar(' ');
 		fputs(u.machine, stdout);
 	}
-	if (print_mask & PRINT_MACHINE_ARCH) {
-		if (space++) putchar(' ');
-		fputs(MACHINE_ARCH, stdout);
-	}		
+	if (space++) putchar(' ');
+	fputs("UNG/Linux", stdout);
 	putchar('\n');
 
 	exit(0);
