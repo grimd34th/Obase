@@ -1,5 +1,5 @@
 #	$OpenBSD: Makefile,v 1.12 2007/11/02 15:26:07 jmc Exp $
-
+COPTS=-I../../libobase -I../../libobase/include
 PROG=	chio
 SRCS=	chio.c parse.y
 DPADD=	${LIBUTIL}
