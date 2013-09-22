@@ -50,7 +50,7 @@ extern char *__progname;
 
 gid_t a_gid(const char *);
 uid_t a_uid(const char *, int);
-__dead void usage(void);
+void usage(void);
 
 int
 main(int argc, char *argv[])
@@ -65,7 +65,10 @@ main(int argc, char *argv[])
 	uid_t uid;
 	gid_t gid;
 	u_int32_t fclear, fset;
-	char *ep, *mode, *cp, *flags;
+  (void)fclear;
+  (void)fset;
+  char *ep, *mode, *cp, *flags;
+  (void)flags;
 #ifdef lint
 	set = NULL;
 	oct = omode = 0;

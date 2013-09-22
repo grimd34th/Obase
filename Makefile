@@ -1,6 +1,6 @@
 USE_DPADD_MK=yes
-COPTS+= -isystem ${.CURDIR}/libobase/include -DOBASE -D_GNU_SOURCE -Os
-COPTS+= -Wall -Wno-unused-parameter
+COPTS+= -isystem ${.CURDIR}/libobase/include -DOBASE -D_GNU_SOURCE -O2
+COPTS+= -Wno-unused-parameter -Wall -Wno-error=attributes -Wno-error=maybe-uninitialized
 COPTS+= -DMACHINE='"${MACHINE}"' -DMACHINE_ARCH='"${MACHINE_ARCH}"'
 HOSTCC=${CC}
 HOSTCFLAGS+=${COPTS}

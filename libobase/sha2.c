@@ -845,9 +845,9 @@ SHA384Init(SHA2_CTX *context)
 	context->bitcount[0] = context->bitcount[1] = 0;
 }
 
-__weak_alias(SHA384Transform, SHA512Transform);
-__weak_alias(SHA384Update, SHA512Update);
-__weak_alias(SHA384Pad, SHA512Pad);
+int __weak_alias(int SHA384Transform, int SHA512Transform);
+int __weak_alias(int SHA384Update, int SHA512Update);
+int __weak_alias(int SHA384Pad, int SHA512Pad);
 
 void
 SHA384Final(u_int8_t digest[SHA384_DIGEST_LENGTH], SHA2_CTX *context)
