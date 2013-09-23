@@ -53,7 +53,8 @@ int
 main(int argc, char *argv[])
 {
 	struct utsname u;
-	int c;
+  int ung = 0;
+  int c;
 	int space = 0;
 	int print_mask = 0;
 
@@ -63,7 +64,8 @@ main(int argc, char *argv[])
 		switch (c) {
 		case 'a':
 			print_mask |= PRINT_ALL;
-			break;
+      ung = 1;
+      break;
 		case 'm':
 			print_mask |= PRINT_MACHINE;
 			break;
@@ -122,8 +124,10 @@ main(int argc, char *argv[])
 		if (space++) putchar(' ');
 		fputs(u.machine, stdout);
 	}
-	if (space++) putchar(' ');
-	fputs("UNG/Linux", stdout);
+	if (ung) {
+    if (space++) putchar(' ');
+	  fputs("UNG/Linux", stdout);
+  }
 	putchar('\n');
 
 	exit(0);
